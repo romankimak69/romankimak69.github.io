@@ -1,9 +1,5 @@
 name: Publish Node.js app to GitHub Pages
 
-concurrency:
-  group: production
-  cancel-in-progress: true
-
 on:
   push:
     branches:
@@ -11,6 +7,16 @@ on:
   pull_request:
     branches:
       - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+  
+concurrency:
+  group: production
+  cancel-in-progress: true
 
 jobs:
   deployment:
