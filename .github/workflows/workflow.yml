@@ -19,9 +19,10 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  deployment:
+  build_and_deploy:
     runs-on: ubuntu-latest
-    environment: production
+    env:
+      CI: false
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -29,14 +30,10 @@ jobs:
         uses: actions/setup-node@v4.0.0
         with: 
           node-version: "18"
-          cache: ${{ steps.detect-package-manager.outputs.manager }}
+          cache: '${{ steps.detect-package-manager.outputs.manager }}'
       - name: Install Dependencies
         run: npm install
       - name: Build
         run: npm run build
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          external_repository: ${{ github.repository }}
-          publish_dir: ./dist
+        uses: actions/deploy-pages@v1.2.9
