@@ -36,4 +36,6 @@ jobs:
       - name: Build
         run: npm run build
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v1.2.9
+        uses: crazy-max/ghaction-github-pages@v4.0.0
+        with:
+          build_dir: './dist'
