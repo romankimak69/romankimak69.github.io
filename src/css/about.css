@@ -112,6 +112,10 @@
     fill: white;
 }
 
+.about-skill-span {
+    width: 60% !important;
+}
+
 /**---------------------------------------------------------------Responsive-----------------------------------------------------*/
 @media (max-aspect-ratio: 12/10) {
     #about-section {
