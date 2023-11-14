@@ -17,18 +17,14 @@ export default [
     },
     {
         name: 'NestJS/Fastify',
-        width: '90%',
+        width: '95%',
     },
     {
         name: 'Python',
         width: '95%',
     },
     {
-        name: 'Django/Flask',
-        width: '90%',
-    },
-    {
-        name: 'FastAPI',
+        name: 'Django/Flask/FastAPI',
         width: '90%',
     },
     {
@@ -37,14 +33,6 @@ export default [
     },
     {
         name: 'ChatGPT/OpenAI',
-        width: '90%',
-    },
-    {
-        name: 'Flowise/LangFlow',
-        width: '90%',
-    },
-    {
-        name: 'Llama 2',
         width: '90%',
     },
     {
