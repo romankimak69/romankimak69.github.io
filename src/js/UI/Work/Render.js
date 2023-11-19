@@ -77,6 +77,13 @@ export default class WorkRender {
                 </svg>
                 Stay up to date
             </div>`
+        } else if (item.vercel) {
+            content = `
+                <div id="work-item-gray-button-${item.id}" class="work-item-gray-button center gray-hover" ${item.liveview ? 'style="width: 50%"' : 'style="width: 100%"'}>
+                    Vercel
+                </div>
+                 ${item.liveview ? `<div id="work-item-orange-button-${item.id}" class="work-item-orange-button small-button center orange-hover">Live View</div>` : ''}
+            `
         } else {
             content = `
                 <div id="work-item-gray-button-${item.id}" class="work-item-gray-button center" style="width: 100%; background: #a7adb8; cursor: unset;">
@@ -116,6 +123,18 @@ export default class WorkRender {
             // Gray button click
             document.getElementById('work-item-gray-button-' + item.id).addEventListener('click', () => {
                 window.open(item.github, '_blank').focus()
+            })
+
+            // orange button click
+            if (item.liveview) {
+                document.getElementById('work-item-orange-button-' + item.id).addEventListener('click', () => {
+                    window.open(item.liveview, '_blank').focus()
+                })
+            }
+        } else if (item.vercel) {
+            // Gray button click
+            document.getElementById('work-item-gray-button-' + item.id).addEventListener('click', () => {
+                window.open(item.vercel, '_blank').focus()
             })
 
             // orange button click
