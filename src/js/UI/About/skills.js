@@ -20,6 +20,14 @@ export default [
         width: '95%',
     },
     {
+        name: 'PHP',
+        width: '95%',
+    },
+    {
+        name: 'Laravel',
+        width: '95%',
+    },
+    {
         name: 'Python',
         width: '95%',
     },

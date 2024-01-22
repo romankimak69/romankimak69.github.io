@@ -11,5 +11,7 @@ export default {
   Django: `<div class="work-item-tag" style="background: #5A69FF;">Django</div>`,
   LLM: `<div class="work-item-tag" style="background: #21BAEB;">Large Language Model</div>`,
   TailwindCSS: `<div class="work-item-tag" style="background: #CA49F8;">TailwindCSS</div>`,
-  Firebase: `<div class="work-item-tag" style="background: #CA49F8;">Firebase</div>`
+  Firebase: `<div class="work-item-tag" style="background: #CA49F8;">Firebase</div>`,
+  Blockchain: `<div class="work-item-tag" style="background: #DA3908;">Blockchain</div>`,
+  Laravel: `<div class="work-item-tag" style="background: #AA3058;">Laravel</div>`
 };
